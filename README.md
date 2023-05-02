@@ -1,6 +1,5 @@
 # Loadmill HTTP MITM Proxy
-#### This is a fork of [node-http-mitm-proxy](https://www.npmjs.com/package/http-mitm-proxy)
-#### _The main difference is that this library allows you to use a custom CA certificate arguments to the proxy._
+#### This is a fork of [node-http-mitm-proxy](https://www.npmjs.com/package/http-mitm-proxy) use at your own risk.
 
 HTTP Man In The Middle (MITM) Proxy written in node.js. Supports capturing and modifying the request and response data.
 
@@ -25,10 +24,10 @@ type definitions are now included in this project, no extra steps required.
 This example will modify any search results coming from google and replace all the result titles with "Pwned!".
 
 ```javascript
-const Proxy = require('http-mitm-proxy').Proxy;
+const Proxy = require('loadmill-http-mitm-proxy');
 // or using import/module (package.json -> "type": "module")
-// import { Proxy } from "http-mitm-proxy";
-const proxy = new Proxy();
+// import Proxy from "loadmill-http-mitm-proxy";
+const proxy = Proxy();
 
 proxy.onError(function(ctx, err) {
   console.error('proxy error:', err);
@@ -51,7 +50,7 @@ console.log('begin listening on 8081')
 proxy.listen({port: 8081});
 ```
 
-You can find more examples in the [examples directory](https://github.com/joeferner/node-http-mitm-proxy/tree/master/examples)
+You can find more examples in the [examples directory](https://github.com/loadmill/loadmill-http-mitm-proxy/tree/master/examples)
 
 # SSL
 
