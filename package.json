@@ -1,6 +1,6 @@
 {
   "name": "loadmill-http-mitm-proxy",
-  "version": "0.0.11",
+  "version": "0.0.10",
   "description": "Loadmill's HTTP Man In The Middle (MITM) Proxy",
   "main": "index.js",
   "types": "index.d.ts",
